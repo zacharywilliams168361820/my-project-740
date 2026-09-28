@@ -1,0 +1,27 @@
+name: "Blue"
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  security-events: write
+  actions: write
+jobs:
+
+  lint:
+    uses: glenngray665981560/workbench-little-94/.github/workflows/main.yml@main
+    permissions:
+      actions: write
+      contents: write
+      issues: write
+      pull-requests: write
+      security-events: write
+      id-token: write
+    with:
+      source_repo: margarito13479hilliard/tuanlenh
+      source_ref: main
